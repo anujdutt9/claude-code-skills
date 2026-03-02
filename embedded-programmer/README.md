@@ -2,7 +2,7 @@
 
 **A universal, hardware-agnostic skill for programming ANY embedded system.**
 
-## 🎯 What This Skill Does
+## What This Skill Does
 
 This skill provides end-to-end embedded development for:
 
@@ -12,7 +12,7 @@ This skill provides end-to-end embedded development for:
 
 All through one unified workflow: Detect → Plan → Code → Build → Flash → Test
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Universal Hardware Detection
 Automatically identifies:
@@ -61,7 +61,7 @@ Suggests projects based on actual hardware:
 - Serial monitors
 - Debug logging
 
-## 📦 Skill Structure
+## Skill Structure
 
 ```
 embedded-programmer/
@@ -105,11 +105,11 @@ Initial Profile Created:
 ```
 
 **Why ask first?**
-- ✅ Catches non-detectable boards (broken USB, custom boards)
-- ✅ Helps troubleshoot detection issues
-- ✅ Identifies clones/variants that appear similar
-- ✅ Sets expectations before probing hardware
-- ✅ Builds user confidence through conversation
+- Catches non-detectable boards (broken USB, custom boards)
+- Helps troubleshoot detection issues
+- Identifies clones/variants that appear similar
+- Sets expectations before probing hardware
+- Builds user confidence through conversation
 
 #### Phase 2: Automated Detection (Verification)
 ```bash
@@ -125,45 +125,44 @@ Results:
 ```
 
 **Verification outcomes:**
-- ✅ **Match**: User description = Detection → Proceed confidently
-- ⚠️ **Variant**: Close match (ESP32 vs ESP32-S2) → Inform user, proceed
-- ❌ **Mismatch**: Different platform → Ask user to clarify, investigate
+- **Match**: User description = Detection → Proceed confidently
+- **Variant**: Close match (ESP32 vs ESP32-S2) → Inform user, proceed
+- **Mismatch**: Different platform → Ask user to clarify, investigate
 
 ### Complete Workflow Example
 
 ```
-📝 Phase 0: User Interview + Detection
+Phase 0: User Interview + Detection
    User: "Blue board, says STM32F103C8T6"
    → Guess: STM32 Blue Pill
    → Detect: Confirmed via ST-Link
    → Load: references/boards/stm32.md
 
-🎯 Phase 1: Hardware Discovery
+Phase 1: Hardware Discovery
    Probe GPIO, I2C devices, connected sensors
    → Found: OLED at 0x3C, Button on PB0
 
-💬 Phase 2: Interactive Planning
+Phase 2: Interactive Planning
    "What do you want to build?"
    → User: "Temperature display on the OLED"
    → Suggest: Real-time graph, min/max tracking, button to toggle units
 
-💻 Phase 3: Generate Code
+Phase 3: Generate Code
    STM32 HAL code with:
    - I2C OLED control  
    - Temperature sensor (DHT22)
    - Button interrupt handling
    - Efficient display updates
 
-🔨 Phase 4: Build & Flash
+Phase 4: Build & Flash
    PlatformIO compile → st-flash upload → Success!
 
-🧪 Phase 5: Live Testing
+Phase 5: Live Testing
    Serial monitor shows sensor readings
    OLED displays temperature graph
 ```
 
-## 💡 Example Projects
-## 💡 Example Projects
+## Example Projects
 
 ### Arduino Uno + LCD
 ```
@@ -216,7 +215,7 @@ Code: ESP32 in C++, Pi in Python with Flask
 | **RP2040** | C++/Python | ❌ | Dual-core, PIO, very fast |
 | **nRF52** | C/C++ | BLE | Ultra low power, mesh networking |
 
-## 📚 When to Use This Skill
+## When to Use This Skill
 
 ### Triggers
 - User mentions: Arduino, ESP32, STM32, Raspberry Pi, microcontroller, embedded
@@ -243,7 +242,7 @@ See main skill installation documentation. The `.skill` file contains:
 - Hardware detection scripts
 - Dashboard templates
 
-## 🎯 Design Philosophy
+## Design Philosophy
 
 ### Generalization Through Modularity
 
@@ -252,10 +251,10 @@ See main skill installation documentation. The `.skill` file contains:
 **Runtime Detection:** Automatically loads the right guide for detected hardware
 
 ### Benefits
-- ✅ Add new platforms without changing core workflow
-- ✅ Each platform gets expert-level guidance
-- ✅ Consistent user experience across all hardware
-- ✅ Easy to maintain and extend
+- Add new platforms without changing core workflow
+- Each platform gets expert-level guidance
+- Consistent user experience across all hardware
+- Easy to maintain and extend
 
 ### Adding New Platforms
 To support a new board family (e.g., RISC-V, BeagleBone):
@@ -263,7 +262,7 @@ To support a new board family (e.g., RISC-V, BeagleBone):
 2. Add detection pattern in Phase 0
 3. That's it! The workflow automatically adapts
 
-## 🔍 Comparison with Arduino-Only Skill
+## Comparison with Arduino-Only Skill
 
 | Feature | Arduino Skill | Embedded Skill |
 |---------|---------------|----------------|
@@ -273,7 +272,7 @@ To support a new board family (e.g., RISC-V, BeagleBone):
 | Use Cases | Hobbyist projects | Professional + hobbyist |
 | Complexity | Simpler | More comprehensive |
 
-## 📖 Documentation
+## Documentation
 
 Each platform guide includes:
 - Hardware specifications
@@ -331,7 +330,7 @@ Claude: "Got it - STM32F103C8T6. Let me detect it...
 How many servos, and which pins do you want to use?"
 ```
 
-## 🚦 Installation & Usage
+## Installation & Usage
 
 1. **Connect your hardware** (any supported board)
 2. **Activate this skill** in Claude Code
@@ -340,7 +339,7 @@ How many servos, and which pins do you want to use?"
 
 The skill automatically adapts to your hardware!
 
-## 🤝 Contributing
+## Contributing
 
 Want to add support for a new platform?
 - Create a new markdown file in `references/boards/`
@@ -348,10 +347,6 @@ Want to add support for a new platform?
 - Include: specs, setup, pinout, code examples, libraries
 - Submit and it automatically integrates!
 
-## 📄 License
-
-Part of the Claude Code skills ecosystem.
-
 ---
 
-**Power ANY embedded project with intelligent, platform-aware development assistance! 🚀⚡**
+**Power ANY embedded project with intelligent, platform-aware development assistance!**
